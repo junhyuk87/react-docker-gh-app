@@ -13,6 +13,7 @@ jobs:
       - run: docker build -t choi4780/react-test -f Dockerfile.dev .
       - run: docker run -e CI=true choi4780/react-test npm test
 
+
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
 
